@@ -1,0 +1,24 @@
+{% extends 'Quiz/dependencies.html' %}
+ 
+{% block content %}
+{% load static %}
+<div class="container ">
+<h1>Welcome to Pinkesh Quiz</h1>
+ 
+<!--<div align="right " id="displaytimer"><b>Timer: 0 seconds</b></div>-->
+ 
+<!-- <form method='post' action="{% url 'home' %}">-->
+    {% csrf_token %}
+     <h1>Instructions :</h1>
+     <ul>
+         <li>Quiz will start once you click Start button.</li>
+         <li>You will get 5 minutes timer to complete the quiz.</li>
+         <li>Each question will carry 10 marks.</li>
+         <li>There will be no negative marking for wrong answers.</li>
+     </ul>
+    <span><a href="{% url 'home' %}">Start</a></span>
+<!--     <button type="submit" class="btn btn-primary">Start</button>-->
+<!--  </form>-->
+
+</div>
+{% endblock %}
